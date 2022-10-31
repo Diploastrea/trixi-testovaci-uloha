@@ -13,9 +13,8 @@ public class XMLServiceImpl implements XMLService {
 
     @Override
     public void download(URL url, String destinationPath) {
-        try {
+        try (FileOutputStream fileOutputStream = new FileOutputStream(destinationPath)) {
             ReadableByteChannel readableByteChannel = Channels.newChannel(url.openStream());
-            FileOutputStream fileOutputStream = new FileOutputStream(destinationPath);
             fileOutputStream.getChannel().transferFrom(readableByteChannel, 0, Long.MAX_VALUE);
         } catch (IOException e) {
             System.err.println(e.getMessage());
