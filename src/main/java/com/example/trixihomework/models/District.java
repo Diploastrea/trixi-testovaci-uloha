@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class District {
     @Id
-    private int code;
+    private Integer code;
     private String name;
     @ManyToOne
     @JoinColumn(name = "town_code")

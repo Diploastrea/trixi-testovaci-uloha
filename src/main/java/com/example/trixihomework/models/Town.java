@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Town {
     @Id
-    private int code;
+    private Integer code;
     private String name;
     @OneToMany(mappedBy = "town")
     private List<District> districts;
