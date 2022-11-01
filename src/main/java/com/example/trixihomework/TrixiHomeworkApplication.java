@@ -21,8 +21,8 @@ public class TrixiHomeworkApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        xmlService.download(new URL(url), destinationPath);
-//        System.out.println("Downloading finished!");
+        xmlService.download(new URL(url), destinationPath);
+        System.out.println("Downloading finished!");
         xmlService.processFile(destinationPath);
         System.out.println("Finished processing XML file.");
     }
