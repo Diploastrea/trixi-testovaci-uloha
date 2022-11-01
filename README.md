@@ -1,6 +1,7 @@
 # Solution for homework from Trixi  
 
 ## How to start
+- Git clone
 - Create DB schema `trixi` in MySQL DB
 - Change DB credentials in `application.properties` file if necessary  
 - Start Spring application
